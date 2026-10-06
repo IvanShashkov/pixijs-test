@@ -1,0 +1,55 @@
+import { cubicBezier } from './ease';
+import type { ThemeConfig } from './types';
+import { worldAssets } from './assets';
+
+/** WoW — Лиса. Silvermoon: deep wine base, gold filigree, ruby, fel-green magic. */
+export const wowTheme: ThemeConfig = {
+  world: 'wow',
+  heroine: 'lisa',
+  lootKind: 'chest',
+  backdrop: 'stars',
+  colors: {
+    bg: 0x1e0916,
+    bgFrom: 0x1e0916,
+    bgMid: 0x3a0f24,
+    bgTo: 0x08040a,
+    surface: 0x341220,
+    surfaceAlpha: 0.78,
+    surfaceRaised: 0x4a1a2e,
+    surfaceRaisedAlpha: 0.9,
+    border: 0xe8bf3d,
+    borderAlpha: 0.4,
+    text: 0xf6ead0,
+    textMuted: 0xe0c48e,
+    textOnAccent: 0x2a1406,
+    accent: 0xe8bf3d,
+    accentBright: 0xffdb70,
+    accentDeep: 0xa6791d,
+    accentSoftAlpha: 0.22,
+    secondary: 0xc8202a,
+    glow: 0x7dfe4c,
+    glowAlpha: 0.5,
+    danger: 0xe02040,
+    particles: [0xe8bf3d, 0xffdb70, 0xe02040, 0x7dfe4c],
+    gems: [0xe02040, 0xe8bf3d, 0x7dfe4c, 0x9b5de5, 0x5aa9ff, 0xf6ead0],
+  },
+  fonts: {
+    heading: ['Cinzel', 'Cormorant Garamond', 'Georgia', 'serif'],
+    body: ['Spectral', 'EB Garamond', 'Georgia', 'serif'],
+    headingUppercase: false,
+    headingLetterSpacing: 1,
+    headingWeight: 'bold',
+  },
+  shape: {
+    radius: 8,
+    panel: 'rounded',
+    chamfer: 0,
+    button: 'pill',
+    corner: 'flourish',
+    divider: 'diamond',
+    borderWidth: 2,
+    buttonBorder: 'gradient',
+  },
+  assets: worldAssets('wow'),
+  ease: cubicBezier(0.25, 0.8, 0.25, 1),
+};

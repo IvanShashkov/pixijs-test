@@ -1,0 +1,55 @@
+import { cubicBezier } from './ease';
+import type { ThemeConfig } from './types';
+import { worldAssets } from './assets';
+
+/** Horizon — Кама. Tribal-tech: deep teal base, cyan tech glow, amber sunset accents. */
+export const horizonTheme: ThemeConfig = {
+  world: 'horizon',
+  heroine: 'kama',
+  lootKind: 'container',
+  backdrop: 'glows',
+  colors: {
+    bg: 0x0e2a33,
+    bgFrom: 0x0c2a2e,
+    bgMid: 0x123b47,
+    bgTo: 0x17495a,
+    surface: 0x123b47,
+    surfaceAlpha: 0.72,
+    surfaceRaised: 0x17495a,
+    surfaceRaisedAlpha: 0.86,
+    border: 0x2fc6d8,
+    borderAlpha: 0.32,
+    text: 0xefe7d6,
+    textMuted: 0xa9bcc0,
+    textOnAccent: 0x07202a,
+    accent: 0x2fc6d8,
+    accentBright: 0x6de4f0,
+    accentDeep: 0x1b95a6,
+    accentSoftAlpha: 0.18,
+    secondary: 0xe8873c,
+    glow: 0x2fc6d8,
+    glowAlpha: 0.45,
+    danger: 0xe8873c,
+    particles: [0x2fc6d8, 0x6de4f0, 0xe8873c, 0xefe7d6],
+    gems: [0x2fc6d8, 0xe8873c, 0x7cb342, 0xc084fc, 0xefe7d6, 0xef5a5a],
+  },
+  fonts: {
+    heading: ['Chakra Petch', 'Exo 2', 'system-ui', 'sans-serif'],
+    body: ['Sora', 'Inter', 'system-ui', 'sans-serif'],
+    headingUppercase: true,
+    headingLetterSpacing: 2,
+    headingWeight: 'bold',
+  },
+  shape: {
+    radius: 4,
+    panel: 'chamfer',
+    chamfer: 14,
+    button: 'chamfer',
+    corner: 'bracket',
+    divider: 'dots',
+    borderWidth: 1,
+    buttonBorder: 'hairline',
+  },
+  assets: worldAssets('horizon'),
+  ease: cubicBezier(0.2, 0.7, 0.3, 1),
+};
